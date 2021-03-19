@@ -1,3 +1,4 @@
+<DOCTYPE html>
 <html><head></head>
 <body>
 <form action="phpaction.php" method="post">
