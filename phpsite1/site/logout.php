@@ -7,13 +7,12 @@ CSC-155-201F_2021SP
 -->*/
 
 
+session_destroy();
 ?>
 <html>
 <head></head>
 <body>
 Have A great Day!
 </body>
-
-<?php include 'header.php';?>
-<?php header("refresh:5;location:./logout.php");?>
+<?php header("Location:../PHPsite1.php");?>
 </html>
