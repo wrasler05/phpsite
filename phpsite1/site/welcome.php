@@ -18,6 +18,9 @@ echo "Welcome ";
 echo $_SESSION['username'];
 ?>
 <?php include 'header.php';?>
+<?php include 'checker.php';?>
+
+<?php include 'itemNumbers.php';?>
 <?php include 'footer.php';?>
 </body>
 
