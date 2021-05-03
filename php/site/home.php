@@ -28,19 +28,19 @@ if ($submit == 'Go To Cart')
 }
 if ($submit == 'item1')
 {
-  echo 'item1';
+  header('location: item/item1.php');
 }
 if ($submit == 'item2')
 {
-  echo 'item2';
+  header('location: item/item2.php');
 }
 if ($submit == 'item3')
 {
-  echo 'item3';
+  header('location: item/item3.php');
 }
 if ($submit == 'item4')
 {
-  echo 'item4';
+  header('location: item/item4.php');
 }
 if ($submit == 'logout')
 {
