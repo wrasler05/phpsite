@@ -40,6 +40,11 @@ echo $item4;
 echo '|  For a Price of: $';
 echo $item4Price;
 echo '<br>';
+
+$totalPrice= $item1Price+$item2Price+$item3Price+$item4Price; 
+echo 'Your Total is: $';
+echo $totalPrice;
+echo '<br>';
 ?>
 
 <form method='post'>
