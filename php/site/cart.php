@@ -20,28 +20,30 @@ $item4Price=$_SESSION['item4Price']??0.00;
 echo 'For Item1 you have: ';
 echo $item1;
 echo '|  For a Price of: $';
-echo $item1Price;
+echo $item1Price * $item1;
 echo '<br>';
 
 echo 'For Item2 you have: ';
 echo $item2;
 echo '|  For a Price of: $';
-echo $item2Price;
+echo $item2Price * $item2;
 echo '<br>';
 
 echo 'For Item3 you have: ';
 echo $item3;
 echo '|  For a Price of: $';
-echo $item3Price;
+echo $item3Price * $item3;
 echo '<br>';
 
 echo 'For Item4 you have: ';
 echo $item4;
 echo '|  For a Price of: $';
-echo $item4Price;
+echo $item4Price * $item4;
 echo '<br>';
 
-$totalPrice= $item1Price+$item2Price+$item3Price+$item4Price; 
+$totalPrice= ($item1Price*$item1)+($item2Price*$item2)+($item3Price*$item3)+($item4Price*$item4);
+$_SESSION['itemPrice']??'';
+$_SESSION['itemPrice'] = $totalPrice; 
 echo 'Your Total is: $';
 echo $totalPrice;
 echo '<br>';
@@ -55,7 +57,8 @@ echo '<br>';
 $submit=$_POST['submit']??'';
 if  ($submit == 'Purchase')
 {
-  echo 'Congratulations You Purchased Stuff';
+ 
+  header('Location:keepsafe/checkout.php');
 }
 if  ($submit == 'Clear Cart')
 {
@@ -69,6 +72,8 @@ if  ($submit == 'Clear Cart')
   $_SESSION['item4']=0;
   $_SESSION['item4Price']=0;
 }
+
+echo '<br><br>'.$_SESSION['error'].'<br><br>';
 
 ?>
 

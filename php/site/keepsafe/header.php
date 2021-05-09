@@ -3,6 +3,6 @@
 <?php
 echo 'hello ';
 echo $_SESSION['yourName'];
-echo 'Theres a owl at your head. ';
+echo '! Theres a owl at your head. <br>';
 ?>
 <br><br>

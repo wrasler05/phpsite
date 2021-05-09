@@ -6,7 +6,7 @@ include 'keepsafe/header.php';
 <?php
 echo '<br>Item 2 Price:$3<br>';
 $item2=$_SESSION['item2']??0;
-$_SESSION['item2Price']??0.00;
+$_SESSION['item2Price'] = 3.00;
 ?>
 <img src="images/item2.jpg" alt="Item2" width="100" height="100">
 <form method="post">
@@ -34,16 +34,13 @@ if($submit == 'Clear Item 2')
 {
   $item2=0;
 }
-$_SESSION['item2']??'';
 $_SESSION['item2']=$item2;
 $item2=$_SESSION['item2'];
 echo 'You Have: ';
 echo $item2;
 echo '<br>';
-$_SESSION['item2Price']??'';
-$_SESSION['item2Price']=$item2*3.00;
 echo 'Your price for item2: $';
-echo $_SESSION['item2Price'];
+echo $_SESSION['item2Price'] * $item2;
 ?>
 
 

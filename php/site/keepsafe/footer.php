@@ -46,7 +46,7 @@ if ($submit == 'logout')
 {
  header('Location:logout.php');
 }
-
+ include 'admin/adminmenu.php';
 ?>
 
 
