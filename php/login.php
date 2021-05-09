@@ -2,12 +2,14 @@
 session_start();
 ?>
 <form method="post">
-  <label for="yourname">Your name:</label>
+  <label for="yourname">Your name:</label><br>
   <input type="text" name="yourName" value="yourName"><br><br>
-  <label for="user">User name:</label>
+  <label for="user">User name:</label><br>
   <input type="text" name="user" value="user"><br><br>
-  <label for="pass">Password:</label>
+  <label for="pass">Password:</label><br>
   <input type="text" name="pwd" value="pwd"><br><br>
+  <label for="pass">Group:</label><br>
+  <input type="text" name="group" value="group"><br><br>
  <input type="submit" name="submit" value="Login">
  <input type="submit" name="submit" value="Create User">
 </form>
@@ -18,6 +20,8 @@ $username=$_POST['user']??'';
 $password=$_POST['pwd']??'';
 $_SESSION['yourName']??'';
 $_SESSION['yourName'] = $_POST['yourName']??'';
+$_SESSION['group']??'';
+$_SESSION['group'] = $_POST['group']??'';
 $_SESSION['username']??'';
 $_SESSION['username'] =$username;
 $_SESSION['password']??'';

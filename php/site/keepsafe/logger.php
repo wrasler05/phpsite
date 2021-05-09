@@ -17,18 +17,20 @@ $password=crypt($_SESSION['password'],$_SESSION['password']);
 #echo $password;
 #echo '<br>:pass --- user:<br>';
 #echo $username;
-$sql = "SELECT userId, username, password FROM users WHERE username like '".$user."' and password like '".$password."'";
+$sql = "SELECT userId, username, password, groupid FROM users WHERE username like '".$user."' and password like '".$password."'";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
+if ($result) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
+    $_SESSION['userid'] = $row['userId'];
+    $_SESSION['group'] = $row['groupid'];
     $_SESSION['status']='true';
     header('Location:../home.php');
   }
 } else {
   $_SESSION['status']='false';
-  $_SESSION['error']='Username or Password did not match ';
+  $_SESSION['error']='Username or Password did not match '.$sql;
   header('Location: ../../login.php');
 }
 $conn->close();
